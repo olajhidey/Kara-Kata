@@ -1,0 +1,42 @@
+page-edit-profile {
+
+    .scroll-content {
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+    }
+
+    .outer {
+        background-color: #488aff;
+        position: absolute;
+        height: 200px;
+        width: 100%;
+    }
+
+    .hd {
+        position: relative;
+        top: 10px;
+        width: 75px;
+        height: 75px;
+        background-color: white;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    .bd {
+        position: relative;
+        width: 200px;
+        height: 80px;
+        background-color: white;
+        margin: auto;
+        top: 30px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+
+  ion-list{
+     padding-top: 200px 
+  }
+
+}

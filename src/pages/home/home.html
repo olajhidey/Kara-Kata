@@ -1,6 +1,7 @@
 <ion-content>
     <div class="about">
-        <h1>Kara Kata</h1>
+        <!--<h1>Kara Kata</h1>-->
+        <img src="../../assets/icon/kara-kata.png">
     </div>
     <ion-list> 
         <ion-item>
@@ -13,11 +14,10 @@
         </ion-item>
 
         <ion-item>
-          <button ion-button color="secondary" block>Login</button>
+          <button ion-button color="secondary" block (click)="doLogin()">Login</button>
         </ion-item>
     </ion-list>
     <a class="fgtPass">Forgot Password?</a>
-    <p>OR</p>
     <ion-row>
         <ion-col col-sm-6>
           <button ion-button block color="primary"><ion-icon name="logo-facebook"></ion-icon> &nbsp; Login with Facebook</button>
@@ -25,18 +25,12 @@
         <ion-col col-sm-6>
            <button ion-button block color="danger"><ion-icon name="logo-google"></ion-icon> &nbsp; Login with Google</button>
         </ion-col>
-      
+        <ion-col col-sm-6>
+           <button ion-button block color="cool" (click) =  "goRegister()"><ion-icon name="mail"></ion-icon> &nbsp; Sign up with Mail</button>
+        </ion-col>
     </ion-row>     
 
 </ion-content>
 
-<ion-footer>
-  <ion-navbar color="cool">
-    <h5 color="light">New user?</h5>
-    <ion-buttons end>
-        <button ion-button (click)="goRegister()">Create Account</button>
-    </ion-buttons>
-  </ion-navbar>
-</ion-footer>
 
 

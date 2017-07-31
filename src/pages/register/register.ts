@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 
 /**
@@ -15,11 +15,25 @@ import { HomePage } from '../home/home';
 })
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  data  = {};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl : ToastController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
+  }
+
+  doRegister(email, pass) {
+    let toast = this.toastCtrl.create({
+      message: "Email and Password cant be empty",
+      duration: 3000,
+      position: "bottom"
+    })
+
+    if(email == null || pass == null) {
+      toast.present();
+    }
   }
 
   goHome() {
