@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="primary">
+    <ion-navbar color="favorite">
         <ion-title>Register</ion-title>
     </ion-navbar>
 </ion-header>
@@ -15,9 +15,10 @@
               <ion-input placeholder="Password" type="password" [(ngModel)] = "data.pass"></ion-input>
           </ion-item>
           <ion-item>
-            <button ion-button block color="primary" (click)="doRegister(data.email, data.pass)">Register</button>
+            <button ion-button block color="favorite" (click)="doRegister(data.email, data.pass)">Register</button>
           </ion-item>
       </ion-list>
+
 
       <p>Already a user? <a (click)="goHome()">Sign in</a></p>
 

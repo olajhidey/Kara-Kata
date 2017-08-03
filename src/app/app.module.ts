@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
 import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 import { CategoryPage } from '../pages/category/category';
+import { RetailDashPage } from '../pages/retail-dash/retail-dash';
 import { UserProvider } from '../providers/user/user';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { UserProvider } from '../providers/user/user';
     HomePage,
     RegisterPage,
     EditProfilePage,
-    CategoryPage
+    CategoryPage,
+    RetailDashPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { UserProvider } from '../providers/user/user';
     HomePage,
     RegisterPage,
     EditProfilePage,
-    CategoryPage
+    CategoryPage,
+    RetailDashPage
   ],
   providers: [
     StatusBar,

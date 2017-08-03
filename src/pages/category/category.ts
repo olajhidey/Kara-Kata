@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { RetailDashPage } from '../retail-dash/retail-dash';
 
 /**
  * Generated class for the CategoryPage page.
@@ -22,8 +23,7 @@ export class CategoryPage {
   }
 
   retail() {
-
-    console.log("I am a retailer")
+    this.navCtrl.setRoot(RetailDashPage);
   }
 
   whole() {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
-import { EditProfilePage } from '../edit-profile/edit-profile';
+import { CategoryPage } from '../category/category';
 
 @Component({
   selector: 'page-home',
@@ -9,12 +9,12 @@ import { EditProfilePage } from '../edit-profile/edit-profile';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, public loadCtrl : LoadingController) {
+    
   }
 
   doLogin() {
-    this.navCtrl.setRoot(EditProfilePage)
+    this.navCtrl.setRoot(CategoryPage)
   }
 
   goRegister() {
