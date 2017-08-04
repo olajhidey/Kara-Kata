@@ -19,7 +19,7 @@ import { UserProvider } from '../providers/user/user';
     RegisterPage,
     EditProfilePage,
     CategoryPage,
-    RetailDashPage
+    RetailDashPage,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,7 @@ import { UserProvider } from '../providers/user/user';
     RegisterPage,
     EditProfilePage,
     CategoryPage,
-    RetailDashPage
+    RetailDashPage,
   ],
   providers: [
     StatusBar,
