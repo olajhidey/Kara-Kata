@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, PopoverController } from 'ionic-angular';
+import { EditpopPage} from '../editpop/editpop';
 
 /**
  * Generated class for the RetailProfilePage page.
@@ -14,7 +15,17 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class RetailProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public popCtrl : PopoverController) {
+  }
+
+  presentPopover($event): void {
+    let popover = this.popCtrl.create(EditpopPage);
+
+    popover.present(
+      {
+        ev: $event
+      }
+    );
   }
 
   ionViewDidLoad() {

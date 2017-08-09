@@ -12,7 +12,7 @@
     </button>
     <ion-title>Profile</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only><ion-icon name="more"></ion-icon></button>
+      <button ion-button icon-only (click)="presentPopover($event)"><ion-icon name="more"></ion-icon></button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -21,6 +21,9 @@
         <div class="head">
           <div class="bdy">
             <h3 text text-center>Retailer</h3>
+          </div>
+          <div class="bio">
+            
           </div>
         </div>
     </div>
@@ -40,13 +43,29 @@
               <button ion-button color="secondary" item-end>send mail</button>
           </ion-item>
             <ion-item>
+              <ion-icon name="home" color="favorite" item-start></ion-icon>
+              Abiola Locksmith Ltd
+            </ion-item>
+            <ion-item>
               <ion-icon name="pin" color="favorite" item-start></ion-icon>
               36 Idumagbo lagos island
             </ion-item>
             <ion-item>
-                <ion-icon name="phone" color="favourite" item-start></ion-icon>
+                <ion-icon name="phone-portrait" color="favorite" item-start></ion-icon>
                 08033035072, 08091036281
             </ion-item>
+              <ion-item>
+                  <ion-icon name="pricetag" color="favorite" item-start></ion-icon>
+                  Locksmith
+              </ion-item>
+                <ion-item>
+                    <ion-icon name="link" color="favorite" item-start></ion-icon>
+                    <a href="#">www.ablocks.com</a>
+                </ion-item>
+                  <ion-item>
+                      <ion-icon name="quote" color="favorite" item-start></ion-icon>
+                      <span text-justify text-wrap >Abiola Locksmith is a registered retail business that deals with selling key blanks and key cutting machines </span>
+                  </ion-item>
        </ion-list>
     </div>
 

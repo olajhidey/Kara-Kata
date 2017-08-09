@@ -16,6 +16,7 @@ import { RetailShopPage } from '../pages/retail-shop/retail-shop';
 import { RetailNotificationPage } from '../pages/retail-notification/retail-notification';
 import { RetailSettingsPage } from '../pages/retail-settings/retail-settings';
 import { UserProvider } from '../providers/user/user';
+import { EditpopPage } from '../pages/editpop/editpop';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UserProvider } from '../providers/user/user';
     RetailNotificationPage,
     RetailProfilePage,
     RetailSettingsPage,
-    RetailShopPage
+    RetailShopPage,
+    EditpopPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { UserProvider } from '../providers/user/user';
     RetailProfilePage,
     RetailSettingsPage,
     RetailShopPage,
-    RetailNotificationPage
+    RetailNotificationPage,
+    EditpopPage
   ],
   providers: [
     StatusBar,

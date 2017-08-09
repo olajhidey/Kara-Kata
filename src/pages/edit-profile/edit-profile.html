@@ -8,9 +8,6 @@
 
   <ion-navbar>
     <ion-title>Edit Profile</ion-title>
-    <ion-buttons end>
-        <button ion-button>skip</button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -23,11 +20,7 @@
   <ion-list>
     <ion-item>
       <ion-icon item-start name="person" color="cool"></ion-icon>
-      <ion-input placeholder="First name"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-icon item-start name="person" color="cool"></ion-icon>
-      <ion-input placeholder="Last name"></ion-input>
+      <ion-input placeholder="Full name"></ion-input>
     </ion-item>
      <ion-item>
       <ion-icon item-start name="phone-portrait" color="cool"></ion-icon>
@@ -38,19 +31,19 @@
       <ion-input placeholder="Store name"></ion-input>
     </ion-item>
      <ion-item>
-      <ion-icon item-start name="locate" color="cool"></ion-icon>
-      <ion-label>Location</ion-label>
-      <ion-select>
-        <ion-option>Abuja</ion-option>
-        <ion-option>Lagos</ion-option>
-        <ion-option>Ogun</ion-option>
-        <ion-option>Oyo</ion-option>
-      </ion-select>
+      <ion-icon item-start name="pin" color="cool"></ion-icon>
+      <ion-input placeholder="Location"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon item-start name="link" color="cool"></ion-icon>
+      <ion-input placeholder="Website"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <button ion-button block (click)="selectCat()">Save</button>
-    </ion-item>
+      <ion-item>
+          <ion-icon item-start name="quote" color="cool"></ion-icon>
+          <ion-textarea placeholder="Bio"></ion-textarea>
+      </ion-item>
   </ion-list>
+    <button ion-button block>Save Profile</button>
 
 </ion-content>

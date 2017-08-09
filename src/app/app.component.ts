@@ -9,6 +9,7 @@ import { RetailShopPage } from '../pages/retail-shop/retail-shop';
 import { RetailNotificationPage } from '../pages/retail-notification/retail-notification';
 import { RetailSettingsPage } from '../pages/retail-settings/retail-settings';
 
+
 import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'
