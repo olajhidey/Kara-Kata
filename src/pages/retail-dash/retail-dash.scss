@@ -4,8 +4,50 @@ page-retail-dash {
         margin: auto;
     }
 
-    ion-badge{
-        position: relative;
-        bottom: 15px;
+    #stock {
+        background-color:  #1ab2ff;
+        color: white;
+        padding: 2px;
+        margin: 3px;
     }
+
+    #sales{
+        background-color:  #ac00e6;
+        color: white;
+        padding: 2px;
+        margin: 3px;
+    }
+
+        #retail {
+            background-color: #ff6600;
+            fill-opacity: 0.9;
+            color:white;
+            margin: 3px;
+            padding: 2px;
+        }
+
+        #purchase{
+            background-color: #4dff4d;
+            fill-opacity: 0.9;
+            color: white;
+            margin: 3px;
+            padding: 2px;
+        }
+
+        #order{
+            background-color: #ff1a1a;
+            fill-opacity: 0.9;
+            color: white;
+            margin: 3px;
+            padding: 2px;
+        }
+  h3, p{
+      font-family: Arial, Helvetica, sans-serif
+  }
+
+  h3{
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+
 }

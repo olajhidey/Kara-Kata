@@ -10,6 +10,11 @@ import { RegisterPage } from '../pages/register/register';
 import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 import { CategoryPage } from '../pages/category/category';
 import { RetailDashPage } from '../pages/retail-dash/retail-dash';
+import { RetailProfilePage } from '../pages/retail-profile/retail-profile';
+import { RetailExplorePage } from '../pages/retail-explore/retail-explore';
+import { RetailShopPage } from '../pages/retail-shop/retail-shop';
+import { RetailNotificationPage } from '../pages/retail-notification/retail-notification';
+import { RetailSettingsPage } from '../pages/retail-settings/retail-settings';
 import { UserProvider } from '../providers/user/user';
 
 @NgModule({
@@ -20,6 +25,11 @@ import { UserProvider } from '../providers/user/user';
     EditProfilePage,
     CategoryPage,
     RetailDashPage,
+    RetailExplorePage,
+    RetailNotificationPage,
+    RetailProfilePage,
+    RetailSettingsPage,
+    RetailShopPage
   ],
   imports: [
     BrowserModule,
@@ -33,6 +43,11 @@ import { UserProvider } from '../providers/user/user';
     EditProfilePage,
     CategoryPage,
     RetailDashPage,
+    RetailExplorePage,
+    RetailProfilePage,
+    RetailSettingsPage,
+    RetailShopPage,
+    RetailNotificationPage
   ],
   providers: [
     StatusBar,

@@ -7,20 +7,39 @@
 
 
 <ion-header>
-  <ion-navbar color="favorite">
+  <ion-navbar color="primary">
       <button ion-button menuToggle icon-only>
         <ion-icon name="menu"></ion-icon>
       </button>
     <ion-title>Dashboard</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon name="chatboxes"></ion-icon>
-        <ion-badge item-top color="danger">5</ion-badge>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <button ion-button block>Click me!</button>
+  <ion-row>
+    <ion-col id="stock" col-sm-6>
+      <h3 text-center>35</h3>
+      <p text-center><strong>No. of Stocks</strong></p>
+    </ion-col>
+    <ion-col id="sales" col-sm-6>
+        <h3 text-center>500</h3>
+        <p text-center>No. of Sales</p>      
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col id="retail">
+      <h3 text-center>100</h3>
+      <p text-center>No. of Wholesalers</p> 
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col id="purchase" col-sm-6>
+      <h3 text-center>30</h3>
+      <p text-center>No. of Purchase</p>
+    </ion-col>
+    <ion-col id="order" col-sm-6>
+      <h3 text-center>100</h3>
+      <p text-center>No. of Order</p>
+    </ion-col>
+  </ion-row>
 </ion-content>

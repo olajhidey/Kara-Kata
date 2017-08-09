@@ -1,36 +1,11 @@
 <ion-menu [content] = "content">
     <ion-header >
-        <ion-toolbar color="favorite">
+        <ion-toolbar color="primary">
             <ion-title>Welcome!</ion-title>
         </ion-toolbar>
     </ion-header>
     <ion-content>
         <ion-list padding no-lines>
-             <!--<ion-item>
-                <ion-icon name="speedometer" item-start color="cool"></ion-icon>
-                Dashboard
-            </ion-item>
-            <ion-item >
-                <ion-icon name="person" item-start color="cool"></ion-icon>
-                Profile
-            </ion-item>
-             <ion-item >
-                <ion-icon name="globe" item-start color="cool"></ion-icon>
-                Explore
-            </ion-item>
-             <ion-item >
-                <ion-icon name="home" item-start color="cool"></ion-icon>
-                Shop
-            </ion-item>
-             <ion-item >
-                <ion-icon name="megaphone" item-start color="cool"></ion-icon>
-                Notifications
-                <ion-badge color="danger" item-end>10</ion-badge>
-            </ion-item>
-             <ion-item >
-                <ion-icon name="settings" item-start color="cool"></ion-icon>
-                Settings
-            </ion-item>-->
             <ion-item menuClose *ngFor="let page of pages" (click)= "openPage(page)">
                 <ion-icon name={{page.icon}} item-start color="cool"></ion-icon>
                 {{page.title}}
