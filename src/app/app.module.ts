@@ -26,6 +26,15 @@ import { WholeNotificationPage } from '../pages/whole-notification/whole-notific
 import { WholeEditPage } from '../pages/whole-edit/whole-edit';
 import { ProfileEditPage } from '../pages/profile-edit/profile-edit';
 import { WholeSettingsPage} from '../pages/whole-settings/whole-settings';
+import { firebaseConfig } from './firebaseconfig';
+import { AngularFireModule} from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { RetailServiceProvider } from '../providers/retail-service/retail-service';
+import { WholesaleServiceProvider } from '../providers/wholesale-service/wholesale-service';
+
+
 
 @NgModule({
   declarations: [
@@ -83,7 +92,10 @@ import { WholeSettingsPage} from '../pages/whole-settings/whole-settings';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UserProvider
+    UserProvider,
+    AuthServiceProvider,
+    RetailServiceProvider,
+    WholesaleServiceProvider
   ]
 })
 export class AppModule {}
