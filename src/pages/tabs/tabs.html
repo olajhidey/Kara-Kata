@@ -1,0 +1,21 @@
+<ion-tabs [selectedIndex]= "mySelectIndex" name="conference">
+  
+  <ion-tab [root]="tab1Root" tabTitle="Dashboard"
+  tabIcon= "speedometer" tabUrlPath="whole-dash"></ion-tab>
+  
+  <ion-tab [root]="tab2Root" tabTitle="Explore"
+  tabIcon= "search" tabUrlPath="whole-explore"></ion-tab>
+  
+  <ion-tab [root]="tab3Root" tabTitle="Store"
+  tabIcon= "home" tabUrlPath="whole-store" class="store">
+  </ion-tab>
+  
+  <ion-tab [root]="tab4Root" tabTitle="Notification"
+  tabIcon= "megaphone" tabUrlPath="whole-notification">
+  </ion-tab>
+  
+  <ion-tab [root]="tab5Root" tabTitle="Profile"
+  tabIcon= "person" tabUrlPath="whole-profile"></ion-tab>
+  
+  
+</ion-tabs>

@@ -10,6 +10,8 @@ import { RetailNotificationPage } from '../pages/retail-notification/retail-noti
 import { RetailSettingsPage } from '../pages/retail-settings/retail-settings';
 
 
+
+
 import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'

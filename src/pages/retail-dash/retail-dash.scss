@@ -1,44 +1,43 @@
 page-retail-dash {
     
-    .display {
-        margin: auto;
-    }
 
     #stock {
         background-color:  #1ab2ff;
         color: white;
+        opacity: .5;
         padding: 2px;
-        margin: 3px;
+     
     }
 
     #sales{
         background-color:  #ac00e6;
+        opacity: 0.5;
         color: white;
         padding: 2px;
-        margin: 3px;
+      
     }
 
         #retail {
             background-color: #ff6600;
-            fill-opacity: 0.9;
+            opacity: 0.5;
             color:white;
-            margin: 3px;
+           
             padding: 2px;
         }
 
         #purchase{
             background-color: #4dff4d;
-            fill-opacity: 0.9;
+            opacity: 0.5;
             color: white;
-            margin: 3px;
+         
             padding: 2px;
         }
 
         #order{
             background-color: #ff1a1a;
-            fill-opacity: 0.9;
+            opacity: 0.5;
             color: white;
-            margin: 3px;
+        ;
             padding: 2px;
         }
   h3, p{
