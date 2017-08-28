@@ -1,4 +1,14 @@
 export interface User {
-    username: string
+    email: string
     password: string
+}
+
+export interface Profile {
+    fullname : string;
+    phone: number
+    storename : string
+    location : string
+    link ?: string
+    bio ?: string
+    tag : any
 }

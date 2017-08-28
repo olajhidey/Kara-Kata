@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController, MenuController, App } from 'ionic-angular';
+import { NavController, NavParams, MenuController, App } from 'ionic-angular';
 
 /**
  * Generated class for the RetailDashPage page.s

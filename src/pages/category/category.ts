@@ -1,14 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { RetailShopPage } from '../retail-shop/retail-shop';
+import { EditProfilePage } from '../edit-profile/edit-profile';
 import { TabsPage } from '../tabs/tabs';
-
-/**
- * Generated class for the CategoryPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireAuth} from 'angularfire2/auth';
 
 @Component({
   selector: 'page-category',
@@ -16,7 +11,14 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class CategoryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  category: string
+  retailer : FirebaseListObservable<any[]>;
+  wholesaler : FirebaseListObservable<any[]>;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private afdb : AngularFireDatabase, private afauth: AngularFireAuth) {
+
+      this.retailer = afdb.list('Retailers');
+      this.wholesaler = afdb.list('Wholesaler');
   }
 
   ionViewDidLoad() {
@@ -24,11 +26,22 @@ export class CategoryPage {
   }
 
   retail() {
-    this.navCtrl.setRoot(RetailShopPage);
+
+    this.category = "retailer"
+    this.retailer.push({
+      userid: this.afauth.auth.currentUser.uid
+    })
+
+    this.navCtrl.setRoot(EditProfilePage, this.category);
   }
 
   whole() {
-   this.navCtrl.setRoot(TabsPage)
+    this.category = "wholesaler"
+    this.wholesaler.push({
+      userid: this.afauth.auth.currentUser.uid
+    })
+    
+   this.navCtrl.setRoot(TabsPage, this.category)
   }
 
 }

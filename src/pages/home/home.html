@@ -3,19 +3,20 @@
         <!--<h1>Kara Kata</h1>-->
         <img src="assets/img/kara-kata.png">
     </div>
+
     <ion-list> 
         <ion-item>
             <ion-label item item-icon-left><ion-icon name="person"></ion-icon></ion-label>
-            <ion-input placeholder="Email" [(ngModel)] = "email"></ion-input>
+            <ion-input placeholder="Email" [(ngModel)] = "login.email"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label item item-icon-left><ion-icon name="lock"></ion-icon></ion-label> 
-            <ion-input placeholder="Password" type="password" [(ngModel)] = "password"></ion-input>
+            <ion-input placeholder="Password" type="password" [(ngModel)] = "login.password"></ion-input>
         </ion-item>
 
-        <ion-item>
-          <button ion-button color="secondary" block (click)="doLogin()" [disabled] ="email == null && password == null">Login</button>
-        </ion-item>
+        
+          <button ion-button block color="secondary" block (click)="doLogin(login.email, login.password)" [disabled] ="login.email == null && login.password == null">Login</button>
+
     </ion-list>
     <a class="fgtPass">Forgot Password?</a>
     <ion-row>

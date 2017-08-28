@@ -26,6 +26,7 @@ import { WholeNotificationPage } from '../pages/whole-notification/whole-notific
 import { WholeEditPage } from '../pages/whole-edit/whole-edit';
 import { ProfileEditPage } from '../pages/profile-edit/profile-edit';
 import { WholeSettingsPage} from '../pages/whole-settings/whole-settings';
+import { ImagePage } from '../pages/image/image';
 import { firebaseConfig } from './firebaseconfig';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -33,7 +34,12 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { RetailServiceProvider } from '../providers/retail-service/retail-service';
 import { WholesaleServiceProvider } from '../providers/wholesale-service/wholesale-service';
-
+import { IonicStorageModule } from '@ionic/Storage';
+import { ImgHandlerProvider } from '../providers/img-handler/img-handler';
+import { Camera } from '@ionic-native/camera';
+import { FileChooser } from '@ionic-native/file-chooser';
+import { File } from '@ionic-native/file';
+import { FilePath } from '@ionic-native/file-path';
 
 
 @NgModule({
@@ -58,11 +64,17 @@ import { WholesaleServiceProvider } from '../providers/wholesale-service/wholesa
     WholeProfilePage,
     WholeSettingsPage,
     ProfileEditPage,
-    WholeEditPage
+    WholeEditPage,
+    ImagePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -86,7 +98,8 @@ import { WholesaleServiceProvider } from '../providers/wholesale-service/wholesa
     WholeProfilePage,
     WholeEditPage,
     WholeSettingsPage,
-    ProfileEditPage
+    ProfileEditPage,
+    ImagePage
   ],
   providers: [
     StatusBar,
@@ -95,7 +108,10 @@ import { WholesaleServiceProvider } from '../providers/wholesale-service/wholesa
     UserProvider,
     AuthServiceProvider,
     RetailServiceProvider,
-    WholesaleServiceProvider
+    WholesaleServiceProvider,
+    ImgHandlerProvider,
+    Camera,
+    File, FilePath, FileChooser
   ]
 })
 export class AppModule {}

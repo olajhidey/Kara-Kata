@@ -15,7 +15,7 @@
   <div class="outer">
       <div class="hd">
         <ion-avatar>
-            <img src="assets/img/retailer.jpg">      
+            <img (click)="chooseImage()" [src]="imgSource">      
         </ion-avatar>  
       </div>
   </div>
@@ -23,31 +23,36 @@
   <ion-list>
     <ion-item>
       <ion-icon item-start name="person" color="cool"></ion-icon>
-      <ion-input placeholder="Full name"></ion-input>
+      <ion-input placeholder="Full name" [(ngModel)] = "profile.fullname"></ion-input>
     </ion-item>
      <ion-item>
       <ion-icon item-start name="phone-portrait" color="cool"></ion-icon>
-      <ion-input type="number" placeholder="Phone "></ion-input>
+      <ion-input type="number" placeholder="Phone" [(ngModel)] = "profile.phone"></ion-input>
     </ion-item>
      <ion-item>
       <ion-icon item-start name="home" color="cool"></ion-icon>
-      <ion-input placeholder="Store name"></ion-input>
+      <ion-input placeholder="Store name" [(ngModel)] = "profile.storename"></ion-input>
     </ion-item>
      <ion-item>
       <ion-icon item-start name="pin" color="cool"></ion-icon>
-      <ion-input placeholder="Location"></ion-input>
+      <ion-input placeholder="Location" [(ngModel)] = "profile.location"></ion-input>
     </ion-item>
     <ion-item>
       <ion-icon item-start name="link" color="cool"></ion-icon>
-      <ion-input placeholder="Website"></ion-input>
+      <ion-input placeholder="Website" [(ngModel)] = "profile.link"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon item-start name="pricetag" color="cool"></ion-icon>
+      <ion-input placeholder="(e.g Beverages, Soft drinks, Locksmith, Mobile Phones)" [(ngModel)] = "profile.tag"></ion-input>
     </ion-item>
 
       <ion-item>
           <ion-icon item-start name="quote" color="cool"></ion-icon>
-          <ion-textarea placeholder="Bio"></ion-textarea>
+          <ion-textarea placeholder="Bio" [(ngModel)] = "profile.model"></ion-textarea>
       </ion-item>
       
-      <button ion-button block>Save Profile</button>
+      <button ion-button block (click) = "saveProfile()">Save Profile</button>
   </ion-list>
     
 
