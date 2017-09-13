@@ -6,42 +6,4 @@ page-edit-profile {
     justify-content: center;
     text-align: center; 
     }
-
-    .outer {
-        background-color: #488aff;
-        position: absolute;
-        height: 200px;
-        width: 100%;
-    }
-
-    .hd {
-        position: relative;
-        top: 10px;
-        margin: auto;
-    }
-    
-    img{
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin: auto;
-        
-    }
-
-    // .bd {
-    //     position: relative;
-    //     width: 200px;
-    //     height: 80px;
-    //     background-color: white;
-    //     margin: auto;
-    //     top: 30px;
-    //     border-top-left-radius: 50px;
-    //     border-top-right-radius: 50px;
-    // }
-
-  ion-list{
-     position: relative;
-     top: 200px;
-  }
-
 }

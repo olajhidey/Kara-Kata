@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Monitor Stock</ion-title>
+  </ion-navbar>
+</ion-header>
+   
+<ion-content>
+
+  <ion-card>
+    <ion-row>
+        <ion-col col-sm-4>
+          <h2 text-center><strong>30</strong></h2>
+          <p text-wrap text-center>Total Stock Available</p>
+        </ion-col>
+        <ion-col col-sm-4>
+            <h2 text-center><strong>40</strong></h2>
+            <p text-wrap text-center>Total Sales Made</p>
+        </ion-col>
+        <ion-col col-sm-4>
+            <h2 text-center><strong>54</strong></h2>
+            <p text-wrap text-center>Total Order</p>
+        </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Stocks</ion-card-header>
+
+    <ion-list no-lines>
+        <ion-item *ngFor="let dta of data">
+            <h3>{{dta.name}}</h3>
+            <ion-badge item-right>{{dta.quantity}}</ion-badge>
+        </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+
+</ion-content>

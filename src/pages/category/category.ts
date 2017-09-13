@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { EditProfilePage } from '../edit-profile/edit-profile';
-import { TabsPage } from '../tabs/tabs';
+import { ProfileEditPage } from '../profile-edit/profile-edit';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { AngularFireAuth} from 'angularfire2/auth';
 
@@ -27,21 +27,26 @@ export class CategoryPage {
 
   retail() {
 
-    this.category = "retailer"
-    this.retailer.push({
-      userid: this.afauth.auth.currentUser.uid
-    })
 
-    this.navCtrl.setRoot(EditProfilePage, this.category);
+    this.category = "retailer"
+
+    let data = {
+      category : this.category
+    }
+    // this.retailer.push({
+    //   userid: this.afauth.auth.currentUser.uid
+    // })
+
+    this.navCtrl.setRoot(EditProfilePage, data);
   }
 
   whole() {
     this.category = "wholesaler"
-    this.wholesaler.push({
-      userid: this.afauth.auth.currentUser.uid
-    })
-    
-   this.navCtrl.setRoot(TabsPage, this.category)
+    // this.wholesaler.push({
+    //   userid: this.afauth.auth.currentUser.uid
+    // }) 
+
+   this.navCtrl.setRoot(ProfileEditPage, this.category)
   }
 
 }

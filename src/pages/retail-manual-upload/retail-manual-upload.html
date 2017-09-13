@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="primary">
+  
+    <ion-title>Upload Stock</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="checkOut()"><ion-icon name="ios-cart-outline"><ion-badge color="danger">{{cartLength}}</ion-badge></ion-icon></button>
+      <button ion-button icon-only padding-left (click)="closeModal()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-input text-wrap placeholder="No of stocks"  type="number" [(ngModel)]="numStock"></ion-input>
+    <button ion-button small color="primary" item-right (click)="openList(numStock)">done</button>
+  </ion-item>
+
+  <ion-card *ngFor="let stock of myStock">
+      <ion-row>
+          <ion-col>
+            <ion-label>Product name</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-input class="product" #prd_name></ion-input>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+            <ion-label>Quantity</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-input class="product" #prd_quantity></ion-input>
+          </ion-col>
+      </ion-row>
+      <ion-item>
+        <button ion-button small item-right (click)="addToCart(prd_name.value, prd_quantity.value, $index)">add</button>
+      </ion-item>
+  </ion-card>
+
+</ion-content>

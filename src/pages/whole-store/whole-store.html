@@ -8,29 +8,29 @@
 <ion-content>
   
   <ion-row>
-    <ion-col col-sm-6 col-md-6 col-lg-6 class="sales">
+    <ion-col col-sm-6 col-md-6 col-lg-6 class="sales" (click)= "goToSales()">
       <img class="image" src="assets/whole/sell.jpg">
         <h5 text-center>Make Sales</h5>
     </ion-col>
-    <ion-col col-sm-6 col-md-6 col-lg-6 class="update">
+    <ion-col col-sm-6 col-md-6 col-lg-6 class="update" (click)="goToUpdate()">
       <img class="image" src="assets/whole/update.jpg">
         <h5 text-center>Update Stock</h5>
      </ion-col>
   </ion-row>
   
   <ion-row>
-    <ion-col col-sm-6 col-md-6 col-lg-6 class="delete">
+    <ion-col col-sm-6 col-md-6 col-lg-6 class="delete" (click)="goToDelete()">
       <img class="image" src="assets/whole/del.jpg">
         <h5 text-center>Delete stock</h5>
     </ion-col>
-    <ion-col col-sm-6 col-md-6 col-lg-6 class="manage">
+    <ion-col col-sm-6 col-md-6 col-lg-6 class="manage" (click)="goToMonitor()">
       <img class="image" src="assets/whole/stock.jpg">
         <h5 text-center>Monitor Stocks</h5>
      </ion-col>
   </ion-row>
   
   <ion-row>
-    <ion-col col-sm-6 col-md-6 col-lg-6 class="order">
+    <ion-col col-sm-6 col-md-6 col-lg-6 class="order" (click)="goToOrder()">
        <img class="image" src="assets/whole/order .jpg">
         <h5 text-center>Monitor orders</h5>
     </ion-col>
@@ -40,8 +40,8 @@
       <button ion-fab><ion-icon name="add"></ion-icon></button>
       
       <ion-fab-list side="top">
-          <button ion-fab><ion-icon name="document"></ion-icon></button>
-          <button ion-fab><ion-icon name="clipboard"></ion-icon></button>
+          <button ion-fab (click)="openManual()"><ion-icon name="clipboard"></ion-icon></button>
+          <button ion-fab (click)="openFile()"><ion-icon name="document"></ion-icon></button>
       </ion-fab-list>
   </ion-fab>
 </ion-content>

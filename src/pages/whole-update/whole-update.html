@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Update Stock</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only><ion-icon name="search"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let dat of data">
+        <ion-list>
+            <ion-item>
+                <h1>{{dat.name}}</h1>
+                <p>You have <strong>{{dat.quantity}}</strong> quantity(s) left</p>
+            </ion-item>
+            <ion-item>
+              <ion-input type="number" placeholder="Enter quantity"></ion-input>
+              <button ion-button small color="danger" item-right>Cancel</button>
+              <button ion-button small color="secondary" item-right>Update</button>
+            </ion-item>
+        </ion-list>
+
+    </ion-card>
+
+</ion-content>

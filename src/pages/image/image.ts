@@ -14,7 +14,7 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ImagePage {
 
-  imgSource =  this.navParams.get('imgSource');
+  imgSource =  this.navParams.get('image');
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

@@ -16,9 +16,14 @@
 <ion-content>
 
   <ion-list>
-      <button ion-item (click)="logout()">
+    <button ion-item>
+      <ion-label>Turn Off notifications</ion-label>
+      <ion-toggle checked="false" color="primary"></ion-toggle>
+    </button>
+
+    <button ion-item (click)="logout()">
         <ion-icon name="log-out" item-start color="danger"></ion-icon>
          Sign out
-       </button> 
+    </button> 
    </ion-list>
 </ion-content>

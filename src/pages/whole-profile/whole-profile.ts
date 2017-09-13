@@ -18,6 +18,8 @@ export class WholeProfilePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public popover: PopoverController) {
   }
 
+  link = "www.olajhidey.com";
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad WholeProfilePage');
   }

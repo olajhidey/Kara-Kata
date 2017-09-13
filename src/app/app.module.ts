@@ -15,7 +15,6 @@ import { RetailExplorePage } from '../pages/retail-explore/retail-explore';
 import { RetailShopPage } from '../pages/retail-shop/retail-shop';
 import { RetailNotificationPage } from '../pages/retail-notification/retail-notification';
 import { RetailSettingsPage } from '../pages/retail-settings/retail-settings';
-import { UserProvider } from '../providers/user/user';
 import { EditpopPage } from '../pages/editpop/editpop';
 import { TabsPage } from '../pages/tabs/tabs';
 import { WholeDashPage} from '../pages/whole-dash/whole-dash';
@@ -26,6 +25,11 @@ import { WholeNotificationPage } from '../pages/whole-notification/whole-notific
 import { WholeEditPage } from '../pages/whole-edit/whole-edit';
 import { ProfileEditPage } from '../pages/profile-edit/profile-edit';
 import { WholeSettingsPage} from '../pages/whole-settings/whole-settings';
+import { WholeSalePage } from '../pages/whole-sale/whole-sale';
+import { WholeUpdatePage } from '../pages/whole-update/whole-update';
+import { WholeDeletePage } from '../pages/whole-delete/whole-delete';
+import { WholeMonitorPage } from '../pages/whole-monitor/whole-monitor';
+import { WholeOrderPage } from '../pages/whole-order/whole-order'
 import { ImagePage } from '../pages/image/image';
 import { firebaseConfig } from './firebaseconfig';
 import { AngularFireModule} from 'angularfire2';
@@ -35,12 +39,22 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { RetailServiceProvider } from '../providers/retail-service/retail-service';
 import { WholesaleServiceProvider } from '../providers/wholesale-service/wholesale-service';
 import { IonicStorageModule } from '@ionic/Storage';
-import { ImgHandlerProvider } from '../providers/img-handler/img-handler';
 import { Camera } from '@ionic-native/camera';
 import { FileChooser } from '@ionic-native/file-chooser';
 import { File } from '@ionic-native/file';
 import { FilePath } from '@ionic-native/file-path';
-
+import { RetailSalesPage } from '../pages/retail-sales/retail-sales';
+import { RetailUpdatePage } from '../pages/retail-update/retail-update';
+import { RetailDeletePage } from '../pages/retail-delete/retail-delete';
+import { RetailMonitorPage } from '../pages/retail-monitor/retail-monitor';
+import { RetailOrderPage } from '../pages/retail-order/retail-order';
+import { FinalOrderPage } from '../pages/final-order/final-order';
+import { RetailManualUploadPage } from '../pages/retail-manual-upload/retail-manual-upload';
+import { RetailCheckOutPage } from '../pages/retail-check-out/retail-check-out';
+import { RetailFilePage } from '../pages/retail-file/retail-file';
+import { WholeUploadPage } from '../pages/whole-upload/whole-upload';
+import { WholeCheckOutPage } from '../pages/whole-check-out/whole-check-out';
+import { WholeFilePage } from '../pages/whole-file/whole-file'
 
 @NgModule({
   declarations: [
@@ -65,7 +79,24 @@ import { FilePath } from '@ionic-native/file-path';
     WholeSettingsPage,
     ProfileEditPage,
     WholeEditPage,
-    ImagePage
+    WholeSalePage,
+    WholeUpdatePage,
+    WholeDeletePage,
+    WholeMonitorPage,
+    WholeOrderPage,
+    ImagePage,
+    RetailSalesPage,
+    RetailUpdatePage,
+    RetailDeletePage,
+    RetailMonitorPage,
+    RetailOrderPage,
+    FinalOrderPage,
+    RetailManualUploadPage,
+    RetailCheckOutPage,
+    RetailFilePage,
+    WholeUploadPage,
+    WholeFilePage,
+    WholeCheckOutPage
   ],
   imports: [
     BrowserModule,
@@ -74,6 +105,7 @@ import { FilePath } from '@ionic-native/file-path';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+  
     
   ],
   bootstrap: [IonicApp],
@@ -98,20 +130,36 @@ import { FilePath } from '@ionic-native/file-path';
     WholeProfilePage,
     WholeEditPage,
     WholeSettingsPage,
+    WholeUpdatePage,
     ProfileEditPage,
-    ImagePage
+    WholeSalePage,
+    WholeDeletePage,
+    WholeMonitorPage,
+    WholeOrderPage,
+    ImagePage,
+    RetailSalesPage,
+    RetailUpdatePage,
+    RetailDeletePage,
+    RetailMonitorPage,
+    RetailOrderPage,
+    FinalOrderPage,
+    RetailManualUploadPage,
+    RetailCheckOutPage,   
+    RetailFilePage,
+    WholeUploadPage,
+    WholeFilePage,
+    WholeCheckOutPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UserProvider,
     AuthServiceProvider,
     RetailServiceProvider,
     WholesaleServiceProvider,
-    ImgHandlerProvider,
     Camera,
-    File, FilePath, FileChooser
+    File, FilePath, FileChooser,
+
   ]
 })
 export class AppModule {}

@@ -1,7 +1,23 @@
 page-image {
 
-    ion-content {
-        background-color: black;
+
+
+
+    img{
+        width: 100%;
+        height: 60%;
+        margin-top: 80px;
+        
     }
+
+    .scroll-content {
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        flex-direction: center;
+        background-color: black;
+        opacity: 0.9;
+    }
+    
 
 }

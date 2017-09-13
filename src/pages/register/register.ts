@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
+import { NavController, NavParams, ToastController, AlertController, LoadingController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { User } from '../../model/auth'; 
@@ -20,7 +20,8 @@ export class RegisterPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     public toastCtrl : ToastController, public authService : AuthServiceProvider,
-    private afauth : AngularFireAuth, private afdb : AngularFireDatabase, public alertCtrl: AlertController) {
+    private afauth : AngularFireAuth, private afdb : AngularFireDatabase, public alertCtrl: AlertController,
+    public loadctrl : LoadingController) {
 
       this.users = this.afdb.list('Users')
   }
@@ -30,7 +31,17 @@ export class RegisterPage {
   }
 
   doRegister(email, pass) {
+
+    let load = this.loadctrl.create({
+      content: "Loading"
+    })
+
+    load.present()
+
     if (this.login.email == null || this.login.password == null) {
+
+      load.dismiss()
+
       this.toastCtrl.create({
         message: 'Email or Password field cant be empty',
         closeButtonText: "Retry",
@@ -38,6 +49,8 @@ export class RegisterPage {
         duration: 3000
       }).present();
   }else if(this.login.email == null && this.login.password == null) {
+
+    load.dismiss();
 
     this.toastCtrl.create({
       message: 'Email and Password field cant be empty',
@@ -48,27 +61,39 @@ export class RegisterPage {
   }else {
     console.log("i am here")
     try {
-        this.afauth.auth.createUserWithEmailAndPassword(this.login.email, this.login.password).then(data=> {    
+      this.afauth.auth.createUserWithEmailAndPassword(this.login.email, this.login.password).then(data=> {   
           
-          this.alertCtrl.create({
-            title: 'Success',
-            message: "Account created successfully",
-            buttons : ['Cancel']
-          }).present();
+          load.dismiss();
+          
 
-          this.navCtrl.setRoot(CategoryPage);
-        })
-        .catch(error => {
-          this.alertCtrl.create({
-            title: 'Warning',
-            message: error.message,
-            buttons : ['Cancel']
+         this.alertCtrl.create({
+         title: 'Success',
+         message: 'Account created successfully',
+         buttons: [ {
+             text: 'Cool',
+            handler: ()=> {
+                this.navCtrl.setRoot(CategoryPage);
+              }
+         }]
+       }).present()
+
+      })
+       .catch(error => {
+         this.alertCtrl.create({
+           title: 'Warning',
+           message: error.message,
+           buttons : [{
+             text: 'Cancel',
+              handler: ()=> {
+                load.dismiss()
+              }
+            }]
           }).present();
         })
 
     }catch(error) {
       console.log(error);
-    }
+     }
   }
 
 }

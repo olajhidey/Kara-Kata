@@ -1,30 +1,43 @@
 page-whole-dash {
+
+    .scroll-content{
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 2px;
+    }
     
     .stocks{
         background-color: #ff8c1a;
         opacity: 0.5;
-        padding: 3px;
+        margin: 3px;
+        height: 150px;
         color:white;
     }
     
     .retailers{
         background-color: #8c1aff;
         opacity: 0.5;
-        padding: 3px;
+        margin: 3px;
+        height: 150px;
         color: white;
     }
     
     .sales {
         background-color: #00ff00;
         opacity: 0.5;
-        padding: 3px;
+        margin: 3px;
+        height: 150px;
         color: white;
     }
     
     .orders {
         background-color: #ff0055;
         opacity: 0.5;
-        padding: 3px;
+        margin: 3px;
+        height: 150px;
         color: white;
     }
 

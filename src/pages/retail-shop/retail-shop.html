@@ -5,34 +5,36 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Shop</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)= "placeOrder()">Place order</button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 <ion-content padding>
-
   <ion-row>
-    <ion-col col-sm-6>
+    <ion-col col-sm-6 (click) = "goToSales()">
       <img src="assets/img/sales.png" >
       <h5 text-center>Make sales</h5>
     </ion-col>
-        <ion-col col-sm-6>
+       <ion-col col-sm-6 (click) = "goToUpdate()">
       <img src="assets/img/update.png" >
       <h5 text-center>Update stock</h5>
     </ion-col>
   </ion-row>
   
   <ion-row>
-    <ion-col col-sm-6>
+    <ion-col col-sm-6 (click)="goToDelete()">
       <img src="assets/img/delete.png" >
       <h5 text-center>Delete stock</h5>
     </ion-col>
      <ion-col col-sm-6>
-      <img src="assets/img/stockmanagement.png" >
+      <img src="assets/img/stockmanagement.png" (click) ="goToMonitor()">
       <h5 text-center>Manage stock</h5>
     </ion-col>
    </ion-row>
 
 <ion-fab right bottom>
-  <button ion-fab icon-only><ion-icon name="add"></ion-icon></button>
+  <button ion-fab icon-only (click)="chooseMethod()"><ion-icon name="add"></ion-icon></button>
 </ion-fab>
 </ion-content>

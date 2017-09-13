@@ -17,20 +17,19 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-   <div row class="profile">
-      <div class="head">
-        <ion-avatar>
-            <img src="assets/img/retailer.jpg"> 
-         </ion-avatar>
-         
-         <h4 text-center>Abiola Locksmith</h4>
-         <p text-center>Retailer</p>
-      </div>
-     
-   </div>
-     
-    <div row class="details">
-       <ion-list>
+  <div padding>
+    <ion-segment [(ngModel)] ="user">
+        <ion-segment-button value="profile">
+            Profile
+          </ion-segment-button>
+          <ion-segment-button value="activity">
+            User activity
+          </ion-segment-button>
+    </ion-segment>
+  </div>
+
+    <div row class="details" [ngSwitch]="user">
+       <ion-list *ngSwitchCase="'profile'">
           <ion-list-header>
             Personal Details
           </ion-list-header>
@@ -41,7 +40,6 @@
           <ion-item>
             <ion-icon name="mail" color="favorite" item-start></ion-icon>
             aroosmith@gmail.com
-              <button ion-button color="secondary" item-end>send mail</button>
           </ion-item>
             <ion-item>
               <ion-icon name="home" color="favorite" item-start></ion-icon>
@@ -68,6 +66,17 @@
                       <span text-justify text-wrap >Abiola Locksmith is a registered retail business that deals with selling key blanks and key cutting machines </span>
                   </ion-item>
        </ion-list>
+    </div>
+
+    <div [ngSwitch]="user">
+      <ion-list *ngSwitchCase="'activity'">
+        <ion-item>
+          <strong>Bread</strong> was sold
+        </ion-item>
+        <ion-item>
+            <strong>Fish</strong> was sold
+          </ion-item>
+      </ion-list>
     </div>
 
 </ion-content>
